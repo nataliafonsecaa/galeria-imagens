@@ -4,9 +4,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color:#140826;
+    background-color:#F2EDE4;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
 }
-
 
 .manual-header{
     /* background-color: rgb(132, 107, 160); */
@@ -33,7 +34,7 @@ body {
 }
 
 .itens_menu a {
-    color: #D285F2;
+    color: #D98C4A;
     text-decoration: none;
     margin: 0 15px;
     padding: 10px;
@@ -41,8 +42,22 @@ body {
     font-size: 1rem;
 }
 
+.logo-nav a.logo-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor do texto original (herda do pai) */
+}
+
+/* Remove mudança de cor quando visitado */
+.logo-nav a.logo-link:visited {
+  color: inherit; /* Mantém a mesma cor, mesmo após clicar */
+}
+
+span{
+  color:#f0a182;
+}
+
  .itens_menu a:hover {
-    color:#A5E0E1;
+    color:#D9653B;
     transition: 0.2s;
 } 
 
@@ -108,4 +123,32 @@ img {
     cursor: pointer;
   }
   
+  .botao-topo {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #f0a182;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
   
+  .botao-topo.visivel {
+    display: block;
+    opacity: 0.7;
+  }
+  
+  .botao-topo:hover {
+    opacity: 1;
+    background-color: #D9653B;
+  }
+
